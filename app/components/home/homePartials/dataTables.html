@@ -1,0 +1,110 @@
+<div ng-show="main.showTables==true" id="tables" class="tableBackground">
+
+    <h1 class="tableDataHeader">Summary</h1>
+
+    <!--ADD Dispensed Data statistics -->
+ <div id="summaryInfoTables">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <table class="table table-striped table-bordered">
+                <caption>Dispensed Doses Stats</caption>
+                <tr class="custHover">
+                    <th>Total mg Ordered</th>
+                    <th>Cost of mg Ordered</th>
+                    <th>Actual mg needed to Dispense</th>
+                    <th>Actual Cost of dispensed</th>
+                    <th>Number of Doses</th>
+                    <th>Actual To List Cost Index</th>
+                </tr>
+                <tr class="custHover">
+                    <td>{{main.totalMgDispensed}}</td>
+                    <td>{{main.theoreticalCostOfDispensed | currency}}</td>
+                    <td>{{main.actualMgDispensed}}</td>
+                    <td>{{main.actualCostOfDispensed | currency}}</td>
+                    <th>{{main.numberOfDosesDispensed}}</th>
+                    <td>{{main.actualToListCostIndex | number:3}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <!--Summaries -->
+
+
+
+    <div class ="row">
+        <div class="col-lg-4">
+            <!-- Summary A -->
+            <table class="table table-striped table-bordered">
+                <caption>Method A Summary</caption>
+                <tr class="custHover">
+                    <th>Total mg Reduced By Round</th>
+                    <th>Cost Savings Total</th>
+                    <th>Number of Doses In Round Ranges</th>
+
+                </tr>
+                <tr class="custHover">
+                    <td>{{main.totalMgReducedByRoundA}}</td>
+                    <td>{{main.totalSavingsRoundA | currency}}</td>
+                    <td>{{main.numDosesInTableA}}</td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <!-- Summary B -->
+            <table class="table table-striped table-bordered">
+                <caption>Method B Summary</caption>
+                <tr class="custHover">
+                    <th>Total mg Reduced By Round</th>
+                    <th>Cost Savings Total</th>
+                    <th>Number of Doses In Round Ranges</th>
+
+                </tr>
+                <tr class="custHover">
+                    <td>{{main.totalMgReducedByRoundB}}</td>
+                    <td>{{main.totalSavingsRoundB | currency}}</td>
+                    <td>{{main.numDosesInTableB}}</td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <!-- Summary C -->
+            <table class="table table-striped table-bordered">
+                <caption>Method C Summary</caption>
+                <tr>
+                    <th>Total mg Reduced By Round</th>
+                    <th>Cost Savings Total</th>
+                    <th>Number of Doses In Round Ranges</th>
+
+                </tr>
+                <tr class="custHover">
+                    <td>{{main.totalMgReducedByRoundC}}</td>
+                    <td>{{main.totalSavingsRoundC | currency}}</td>
+                    <td>{{main.numDosesInTableC}}</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+ </div> <!--summaryInfoTables -->
+
+    <h1 class="tableDataHeader">Table Data</h1>
+    <!--Filter for tables-->
+
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <select class="form-control" ng-model="main.tableFilter" ng-options="o as o for o in main.tableFilterOptions"></select>
+        </div>
+    </div>
+
+  
+
+
+
+
+
+</div> <!--Tables-->

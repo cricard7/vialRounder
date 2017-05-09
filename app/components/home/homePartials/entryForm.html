@@ -1,0 +1,85 @@
+
+    <div class="row clearfix">
+
+
+        <div class="col-md-6 col-md-offset-3 column formBackground entryForm">
+
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="form-group">
+                        <label for="medName">Medication Name</label>
+                        <input ng-model="main.entryForm.medicationName" type="text" class="form-control" id="medName" placeholder="Enter medication name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+
+                <div class="col-md-5 column">
+                    <div class="form-group">
+                        <label for="smallVial">Small Vial Size</label>
+                        <input ng-model="main.entryForm.smallVialSize" type="number" class="form-control" id="smallVial" placeholder="Enter small vial size in mg">
+                    </div>
+                </div>
+                <div class="col-md-5 column">
+                    <div class="form-group">
+                        <label for="largeVial">Large Vial Size</label>
+                        <input ng-model="main.entryForm.largeVialSize" type="number" class="form-control" id="largeVial" placeholder="Enter large vial size in mg or 0 if only one size">
+                    </div>
+                </div>
+                <div class="col-md-2 column">
+                    <div class="form-group">
+                        <label for="costPerMg">Cost per mg</label>
+                        <input ng-model="main.entryForm.costPerMg" type="number" class="form-control" id="costPerMg" placeholder="Cost per mg">
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <div class="form-group">
+                        <label for="MaxDoseUnit">Maximum Dose unit (m2 or kg)</label>
+                        <input ng-model="main.entryForm.maxDoseUnit" type="number" class="form-control" id="MaxDoseUnit" placeholder="Enter the maximum dose unit to analyze (Either BSA or Weight)">
+                    </div>
+                </div>
+                <div class="col-md-6 column">
+                    <div class="form-group">
+                        <label for="dosePerUnit">Dose Per Unit</label>
+                        <input ng-model="main.entryForm.dosePerUnit" type="number" class="form-control" id="dosePerUnit" placeholder="Enter dose per unit (in mg/kg or mg/m2)">
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                 <div class="form-group">
+                        <label for="roundPercent">Maximum Round Percentage</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">%</span>
+                            <input ng-model="main.entryForm.roundPercent" type="number" class="form-control" id="roundPercent" placeholder="Enter maximum percentage to round within">
+                            </div>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="form-group">
+                        <label for="vialsUsedTextArea">Vials Dispensed Data</label>
+                        <textarea ng-model="main.entryForm.dispensedDosesTextArea" class="form-control" id="vialsUsedTextArea" placeholder="Copy and Paste the Dispensed Vial Data Here"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-4">
+                    <button type="button" ng-click="main.entryForm.analyzeData()" class="btn btn-primary">Analyze!</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+

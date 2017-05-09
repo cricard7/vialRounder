@@ -1,0 +1,113 @@
+@media print {
+    footer {page-break-after: always;}
+}
+
+/*General Styles*/
+
+
+.centreHalfWidth {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+
+/*Form Styles */
+.entryForm{
+    margin-top: 50px;
+}
+#formHeader{
+    margin-bottom: 30px;
+    color: blue;
+
+}
+
+.formBackground{
+
+    background-color: #555555;
+    color: rgba(206, 201, 211, 0.99);
+    padding: 3em;
+
+}
+
+/*Table Styles */
+
+.custHover:hover{
+
+    background-color: purple;
+}
+
+.tableDataHeader {
+
+    margin-bottom: 30px;
+    margin-top: 50px;
+    color: rgba(35, 86, 144, 1);
+    text-align: center;
+}
+
+.rowHover:hover{
+
+    background-color: purple;
+
+}
+.custHover:hover{
+
+    background-color: purple;
+}
+
+#summaryInfoTables{
+
+    margin-bottom: 3em;
+
+}
+
+/*Chart Style */
+
+.overViewChart{
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.charts{
+    margin-top: 50px;
+}
+#analysisLineChart{
+    width: 80%;
+    display: inline;
+}
+#analysisBarChart{
+    width: 80%;
+    display: inline;
+}
+
+
+/*SBAR template styles */
+
+.subHeading{
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.sBARTitle {
+    font-weight: bold;
+
+}
+
+.referenceHeading{
+
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.superscript{
+
+    vertical-align: super;
+    font-size: 0.7em;
+}

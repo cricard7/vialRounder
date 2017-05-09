@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vial Rounding Analysis Tool</title>
+
+
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- Angular app file, services & custom css styles -->
+    <script src="app/appModule.js"></script>
+    <!--app Components/home -->
+    <script src="app/components/home/homeController.js"></script>
+    <!--model-->
+
+    <script src="app/components/home/tableFactory.js"></script>
+    <script src="app/components/tblComp.js"></script>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+
+
+
+
+
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="assets/css/myCustomStyles.css" type="text/css">
+
+
+
+
+
+</head>
+
+<body ng-controller="mainController as main">
+
+   
+    
+    <div class="container-fluid">
+ <div class="jumbotron">
+        <h1 class="text-center">Vial Rounding Analysis Tool</h1>
+    </div>
+        <!--Entry Form -->
+        <div ng-include="'app/components/home/homePartials/entryForm.html'"></div>
+
+
+        <!--Data Tables -->
+        <div ng-include="'app/components/home/homePartials/dataTables.html'"></div>
+ 
+        <div ng-show="main.showTables==true">
+
+            <!-- test another column A  -->
+            <tbl-comp filter-state="main.tableFilter" tbl-data="main.allCombosTableA" tbl="A"></tbl-comp>
+            <tbl-comp filter-state="main.tableFilter" tbl-data="main.allCombosTableB" tbl="B"></tbl-comp>
+            <tbl-comp filter-state="main.tableFilter" tbl-data="main.allCombosTableC" tbl="C" num-round-up={{main.numDosesRoundedUpC}}></tbl-comp>
+        
+        <footer> ----- </footer>
+
+      
+
+</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
